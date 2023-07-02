@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-server
+  template:
+    metadata:
+      labels:
+        app: api-server
+    spec:
+      containers:
+        - name: api-server
+          image: dockerhubfadi/api-server-task:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MY_ENVIRONMENT_VARIABLE
+              valueFrom:
+                configMapKeyRef:
+                  name: my-env-var-configmap
+                  key: my-env-var-value
