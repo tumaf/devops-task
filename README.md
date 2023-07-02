@@ -10,4 +10,4 @@ Please follow the steps below in order to get the proper results.
 ## How to Run the task
 1. Clone the repository: 'https://github.com/tumaf/devops-task'
 2. Navigate to the repo directory.
-3. run the script deploy-app.sh
+3. Run the script *deploy-app.sh*
