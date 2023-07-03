@@ -42,8 +42,11 @@ docker push registry/you-image-name
 1. From your K8S cluster, SSH to any pod under the same namespace and run *curl http://api-service:8080/get_variable*
 
 ## Even more tests
-1. You can run additonal GET API ```javascript curl http://api-service:8080/healthy ```
-2. In case you want to edit/update the environemnt variable value you can acheive that by running the following cURL command:\
+1. You can run additonal GET API
+    ```javascript
+   curl http://api-service:8080/healthy
+     ```
+3. In case you want to edit/update the environemnt variable value you can acheive that by running the following cURL command:
 ```javascript
    curl -X POST http://api-service:8080/edit_variable -H "Content-Type: application/json" -d "{\"value\":\"YOUR_UPDATED_VALUE\"}"
 ```
