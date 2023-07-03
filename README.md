@@ -14,7 +14,7 @@ Please follow the steps below in order to get the proper results.
 
 ## How to build and run the container
 In case you want to build the image again, make sure you are in the repo dir and run the following commands:
-1. *docker build -t api-server-task .*
+1. *docker build -t api-server-task .* (Don't forget the dot :))
 2. *docker run -d -p 8080:5000 api-server-task*
 3. From your browser, try to access http://localhost:8080/healthy or /get_variable
 
