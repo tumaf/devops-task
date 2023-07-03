@@ -14,9 +14,14 @@ Please follow the steps below in order to get the proper results.
 
 ## How to build and run the container
 In case you want to build the image again, make sure you are in the repo dir and run the following commands:
-1. *docker build -t api-server-task .* (Don't forget the dot :))
-2. *docker run -d -p 8080:5000 api-server-task*
-3. From your browser, try to access http://localhost:8080/healthy or /get_variable
+
+```javascript
+   docker build -t api-server-task .
+```
+```javascript
+   docker run -d -p 8080:5000 api-server-task
+```
+From your browser, try to access http://localhost:8080/healthy or /get_variable
 
 ## How to deploy it to kubernetes
 Make sure you are in the repo dir and run the script *deploy-app.sh* and check that pod, cm and service are running properly.\
@@ -24,16 +29,22 @@ Make sure you are in the repo dir and run the script *deploy-app.sh* and check t
 \
 **[optional]**\
 If you want to rename the image and/or change registry, run the following.
-1. *docker tag api-server-task registry/you-image-name*
-2. *docker push registry/you-image-name* - remote/local registry \
-**NOTE:** If you decided to tag the image with another name, make sure to change the image name properly in api-server-deployment.yaml file and run the *deploy-app.sh* script again.
+```javascript
+docker tag api-server-task registry/you-image-name
+```
+```javascript
+docker push registry/you-image-name
+```
+**NOTE:** If you decided to tag the image with your local/remote registry, make sure to change the image name properly in api-server-deployment.yaml file and run the *deploy-app.sh* script again.
 
 
 ## How to test results
 1. From your K8S cluster, SSH to any pod under the same namespace and run *curl http://api-service:8080/get_variable*
 
 ## Even more tests
-1. You can run additonal GET API *curl http://api-service:8080/healthy*
+1. You can run additonal GET API ```javascript curl http://api-service:8080/healthy ```
 2. In case you want to edit/update the environemnt variable value you can acheive that by running the following cURL command:\
-   *curl -X POST http://api-service:8080/edit_variable -H "Content-Type: application/json" -d "{\"value\":\"YOUR_UPDATED_VALUE\"}"*
+```javascript
+   curl -X POST http://api-service:8080/edit_variable -H "Content-Type: application/json" -d "{\"value\":\"YOUR_UPDATED_VALUE\"}"
+```
 3. You can test the result by running /get_variable again.
