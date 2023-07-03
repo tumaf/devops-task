@@ -6,7 +6,7 @@ Please follow the steps below in order to get the proper results.
 1. Dockerfile is provided but the image is already built and pushed to Dockerhub.
 2. In Kubernetes folder, api-server-deployment.yaml container image value is already assigned to use the image from my public account, but you can rebuild the image and push it into your remote or local registry and assign the new value into deployment yaml, if needed.
 3. You can access the application internally from the cluster with port 8080.
-4. Namespace for the aplicaiton is *testing*, feel free to change it in the yaml files if needed.
+4. Namespace for the application is *testing*, feel free to change it in the yaml files if needed.
 
 ## How to Run the project
 1. Clone the repository: 'https://github.com/tumaf/devops-task'
