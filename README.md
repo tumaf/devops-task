@@ -22,7 +22,7 @@ In case you want to build the image again, make sure you are in the repo dir and
 Make sure you are in the repo dir and run the script *deploy-app.sh* and check that pod, cm and service are running properly.\
 **NOTE:** Provide the script with required permissions if needed.\
 \
-**optional**\
+**[optional]**\
 If you want to rename the image and/or change registry, run the following.
 1. *docker tag api-server-task registry/you-image-name*
 2. *docker push registry/you-image-name* - remote/local registry \
