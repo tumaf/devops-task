@@ -30,10 +30,10 @@ Make sure you are in the repo dir and run the script *deploy-app.sh* and check t
 ## [optional]
 If you want to rename the image and/or change registry, run the following.
 ```javascript
-docker tag api-server-task registry/you-image-name
+docker tag api-server-task registry/your-image-name
 ```
 ```javascript
-docker push registry/you-image-name
+docker push registry/your-image-name
 ```
 **NOTE:** If you decided to tag the image with your local/remote registry, make sure to change the image name properly in api-server-deployment.yaml file and run the *deploy-app.sh* script again.
 
