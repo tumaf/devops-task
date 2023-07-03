@@ -1,7 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-server
+  name: api-server-deployment
+  namespace: testing
+  labels:
+      app: api-server
 spec:
   replicas: 1
   selector:
@@ -13,7 +16,7 @@ spec:
         app: api-server
     spec:
       containers:
-        - name: api-server
+        - name: api-server-deployment
           image: dockerhubfadi/api-server-task:latest
           ports:
             - containerPort: 5000
