@@ -34,6 +34,6 @@ If you want to rename the image and/or change registry, run the following.
 
 ## Even more tests
 1. You can run additonal GET API *curl http://api-service:8080/healthy*
-2. In case you want to edit/update the environemnt variable value you can acheive that by running the following:
+2. In case you want to edit/update the environemnt variable value you can acheive that by running the following cURL command:\
    *curl -X POST http://api-service:8080/edit_variable -H "Content-Type: application/json" -d "{\"value\":\"YOUR_UPDATED_VALUE\"}"*
 3. You can test the result by running /get_variable again.
