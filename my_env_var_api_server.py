@@ -27,4 +27,4 @@ def edit_variable():
         return jsonify({"error": "Invalid request"}), 400
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', debug=True)

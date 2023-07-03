@@ -7,7 +7,7 @@ spec:
   selector:
     app: api-server
   ports:
-    - port: 9090
+    - port: 8080
       targetPort: 5000
       protocol: TCP
   type: ClusterIP

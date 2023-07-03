@@ -4,4 +4,4 @@ metadata:
   name: my-env-var-configmap
   namespace: testing
 data:
- my-env-var-value: "test done!"
+ my-env-var-value: "Augury task done!"
